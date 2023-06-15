@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main Programming is like a puzzle
+ * main - Programming is like a puzzle
  * Return: 0(Success)
  */
 int main(void)
