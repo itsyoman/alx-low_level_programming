@@ -1,21 +1,14 @@
+#include <stdio.h>
 #include <unistd.h>
-#include <string.h>
-#include <sys/syscall.h>
-
-#define STDERR_FILENO 2
 
 /**
- * main - Entry point
- *
- * Description: Prints a message to the standard error output.
- *
- * Return: Always 1 (Exit failure)
- */
+* main - Entry point
+*
+* Return: Always 1 (Success)
+*/
 int main(void)
 {
-	const char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
-	syscall(SYS_write, STDERR_FILENO, message, strlen(message));
-
+	write(2,
+	"and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
 	return (1);
 }
